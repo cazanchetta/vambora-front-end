@@ -1,0 +1,16 @@
+<h3>Carros Disponiveis</h3>
+
+<table class="table table-sm"> 
+    <thead>
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Placa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of carrosDisponiveis">
+        <th scope="row">{{c.id}}</th>
+        <td>{{c.placa}}</td>
+        </tr>
+    </tbody>
+</table>

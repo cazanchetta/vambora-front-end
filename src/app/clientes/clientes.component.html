@@ -1,0 +1,18 @@
+<h3>Clientes</h3>
+
+<table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Documento</th>
+        <th scope="col">Nome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clientes">
+        <th scope="row">{{c.id}}</th>
+        <td>{{c.documento}}</td>
+        <td>{{c.nome}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,39 @@
+<h3>Viagens</h3>
+
+<table class="table table-sm"> 
+    <thead>
+        <tr>
+        <th>ID_CLIENTE</th>
+        <th>ID_CARRO</th>
+        <th>STATUS_VIAGEM</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of viagens">
+        <td>{{v.idCliente}}</td>
+        <td>{{v.idCarro}}</td>
+        <td>{{v.statusViagem}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<form class="form-inline" method="POST" #frm="ngForm" (ngSubmit)=solicitarViagem()>
+    <label class="sr-only" for="idCliente">Id Cliente</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Id Cliente" [(ngModel)]="viagem.idCliente" name="idCliente">
+
+    <button type="submit" class="btn btn-primary mb-2">Solicitar Viagem</button>
+</form>
+
+<form class="form-inline" method="GET" (ngSubmit)=iniciarViagem()>
+    <label class="sr-only" for="iniciarViagem">Id Cliente</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Id Viagem" [(ngModel)]="idViagemIniciar" name="iniciarViagem">
+
+    <button type="submit" class="btn btn-primary mb-2">Iniciar Viagem</button>
+</form>
+
+<form class="form-inline" method="GET" (ngSubmit)=finalizarViagem()>
+    <label class="sr-only" for="finalizarViagem">Id Cliente</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Id Viagem" [(ngModel)]="idViagemFinalizar" name="finalizarViagem">
+
+    <button type="submit" class="btn btn-primary mb-2">Finalizar Viagem</button>
+</form>
